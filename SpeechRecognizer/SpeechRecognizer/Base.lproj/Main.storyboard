@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Speech Recognizer View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SpeechRecognizerViewController" customModule="SpeechRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Recognizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OH-cD-6FS">
+                                <rect key="frame" x="100.5" y="144" width="213" height="31"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P82-Ge-mlU">
+                                <rect key="frame" x="107" y="612" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="CRh-vZ-6f7"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ygc-zw-5mB"/>
+                                </constraints>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOx-om-7Rq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vde-5G-mER">
+                                <rect key="frame" x="171" y="225" width="72.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9T-8Q-KZN">
+                                <rect key="frame" x="80" y="272.5" width="254" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bmg-8a-Hji">
+                                <rect key="frame" x="107" y="692" width="200" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="96b-Ro-r8l"/>
+                                    <constraint firstAttribute="width" constant="200" id="zFx-24-V7A"/>
+                                </constraints>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hcw-H3-xoB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8OH-cD-6FS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="2Ye-Fv-5xo"/>
+                            <constraint firstItem="8OH-cD-6FS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dfy-YU-rxF"/>
+                            <constraint firstItem="t9T-8Q-KZN" firstAttribute="top" secondItem="Vde-5G-mER" secondAttribute="bottom" constant="20" id="FIJ-il-cv7"/>
+                            <constraint firstItem="P82-Ge-mlU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K5a-Ep-bkV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t9T-8Q-KZN" secondAttribute="trailing" constant="80" id="KcN-EU-TdC"/>
+                            <constraint firstItem="t9T-8Q-KZN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TEL-yT-VJg"/>
+                            <constraint firstItem="Vde-5G-mER" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TQh-XN-Coc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P82-Ge-mlU" secondAttribute="bottom" constant="200" id="Y0a-5l-McH"/>
+                            <constraint firstItem="Bmg-8a-Hji" firstAttribute="top" secondItem="P82-Ge-mlU" secondAttribute="bottom" constant="30" id="ciQ-sk-DTn"/>
+                            <constraint firstItem="Bmg-8a-Hji" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="deQ-B9-Bug"/>
+                            <constraint firstItem="t9T-8Q-KZN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="rin-Jw-yXt"/>
+                            <constraint firstItem="Vde-5G-mER" firstAttribute="top" secondItem="8OH-cD-6FS" secondAttribute="bottom" constant="50" id="uDD-6k-Rt4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="Bmg-8a-Hji" id="YVP-Aq-KQ6"/>
+                        <outlet property="convertButton" destination="P82-Ge-mlU" id="2HV-9Y-Ee3"/>
+                        <outlet property="convertedTextLabel" destination="t9T-8Q-KZN" id="uNX-F7-Bog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="100"/>
+        </scene>
+    </scenes>
+</document>
